@@ -50,7 +50,6 @@ HEADERS += \
     src/gamelogic.h
 
 DISTFILES += \
-    qml/pages/Cell.qml \
     rpm/ru.auroraos.LiveGame.spec \
     AUTHORS.md \
     CODE_OF_CONDUCT.md \
