@@ -8,9 +8,6 @@ GameLogic::GameLogic(QObject *parent) : QObject(parent)
     m_columns = 0;
     m_grid = QVector<int>();
     m_timer = new QTimer(this);
-    for (int i = 0; i < m_rows * m_columns; i++) {
-        m_grid.append(qrand() % 2);
-    }
     // Соединяем сигнал таймера со слотом обновления сетки
     connect(m_timer, &QTimer::timeout, this, &GameLogic::updateGrid);
 }
@@ -76,13 +73,6 @@ void GameLogic::start()
 {
     // Запускаем таймер с интервалом в 500 мс
     m_timer->start(500);
-    m_grid.clear();
-    for (int i = 0; i < m_rows * m_columns; i++) {
-        m_grid.append(qrand() % 2);
-    }
-
-    // Уведомляем QML об изменении сетки
-    emit gridChanged(m_grid);
 }
 
 // Слот для остановки игры
