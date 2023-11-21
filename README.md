@@ -20,12 +20,18 @@ of an application based on C++ and QML for Aurora OS.
   * **[pages](qml/pages)** directory contains the application pages.
   * **[LiveGame.qml](qml/LiveGame.qml)** file
     provides the application window implementation.
+
 * **[rpm](rpm)** directory contains the rpm-package build settings.
   **[ru.auroraos.LiveGame.spec](rpm/ru.auroraos.LiveGame.spec)** file is used by rpmbuild tool.
   It is generated from **[ru.auroraos.LiveGame.yaml](rpm/ru.auroraos.LiveGame.yaml)** file.
+
+
 * **[src](src)** directory contains the C++ source code.
   * **[main.cpp](src/main.cpp)** file is the application entry point.
   *  **[gamelogic.cpp](src/gamelogic.cpp)** file is the game logic of application
 * **[translations](translations)** directory contains the UI translation files.
 * **[ru.auroraos.LiveGame.desktop](ru.auroraos.LiveGame.desktop)** file
   defines the display and parameters for launching the application.
+
+## Demo
+![Demo](https://github.com/alexmihalyk23/aurora-The-Game-Of-Life/assets/35634279/aba18399-d363-4184-8881-c0afe7ae1343)
