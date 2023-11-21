@@ -1,4 +1,4 @@
-# LiveGame для ОС Аврора
+# The Game of Life для ОС Аврора
 
 LiveGame
 
@@ -25,6 +25,7 @@ of an application based on C++ and QML for Aurora OS.
   It is generated from **[ru.auroraos.LiveGame.yaml](rpm/ru.auroraos.LiveGame.yaml)** file.
 * **[src](src)** directory contains the C++ source code.
   * **[main.cpp](src/main.cpp)** file is the application entry point.
+  *  **[gamelogic.cpp](src/gamelogic.cpp)** file is the game logic of application
 * **[translations](translations)** directory contains the UI translation files.
 * **[ru.auroraos.LiveGame.desktop](ru.auroraos.LiveGame.desktop)** file
   defines the display and parameters for launching the application.
