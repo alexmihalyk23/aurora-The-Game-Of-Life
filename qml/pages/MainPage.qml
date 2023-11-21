@@ -46,7 +46,7 @@ Page {
                 id: grid1
                 rows: 18
                 columns: 11
-                spacing: 5
+                spacing: 6
                 Repeater {
                     model: gameLogic.gridList
                     delegate: Rectangle {
