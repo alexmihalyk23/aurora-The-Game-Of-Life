@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.auroraos.LiveGame
+Exec=/usr/bin/ru.auroraos.LiveGame
+Name=LiveGame
+Name[ru]=LiveGame
+
+[X-Application]
+Permissions=UserDirs
+OrganizationName=ru.auroraos
+ApplicationName=LiveGame
+ExecDBus=/usr/bin/ru.auroraos.LiveGame
