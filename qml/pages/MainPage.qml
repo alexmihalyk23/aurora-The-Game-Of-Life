@@ -16,6 +16,7 @@ Page {
     }
     PageHeader{
         title: "Игра в Жизнь"
+        
 
     }
 
@@ -38,6 +39,7 @@ Page {
                 }
 
                 IconButton {
+                    id:stopButton
                     icon.source: "image://theme/icon-m-pause"
                     onClicked: gameLogic.stop() // Поставить игру на паузу
                 }
@@ -48,6 +50,7 @@ Page {
                     onClicked: {
                                             gameLogic.reset() // Сбросить игру
                                             startButton.enabled = true // Разрешить нажатие кнопки "Start"
+                                            stopButton.enabled = true
                                         }
 
                 }
@@ -80,6 +83,7 @@ Page {
     }
     Component.onCompleted: {
             startButton.enabled = false // Запретить нажатие кнопки "Start" при запуске приложения
+            stopButton.enabled = false
         }
 
 }
