@@ -12,24 +12,29 @@ Page {
         rows: 18 // Количество строк в сетке
         columns: 11 // Количество столбцов в сетке
 
+
     }
     PageHeader{
         title: "Игра в Жизнь"
+
     }
 
 
 
 
     SilicaGridView {
+
+
         ColumnLayout {
             Row {
                 Layout.fillWidth: true
                 Layout.preferredHeight: Theme.itemSizeLarge
 
                 IconButton {
+                     id: startButton
                     icon.source: "image://theme/icon-m-play"
                     onClicked: gameLogic.start() // Запустить игру
-                    enabled: true
+
                 }
 
                 IconButton {
@@ -38,8 +43,13 @@ Page {
                 }
 
                 IconButton {
+                     id: resetButton
                     icon.source: "image://theme/icon-m-refresh"
-                    onClicked: gameLogic.reset() // Сбросить игру
+                    onClicked: {
+                                            gameLogic.reset() // Сбросить игру
+                                            startButton.enabled = true // Разрешить нажатие кнопки "Start"
+                                        }
+
                 }
             }
             Grid{
@@ -47,6 +57,8 @@ Page {
                 rows: 18
                 columns: 11
                 spacing: 6
+
+
                 Repeater {
                     model: gameLogic.gridList
                     delegate: Rectangle {
@@ -66,5 +78,8 @@ Page {
             }
         }
     }
+    Component.onCompleted: {
+            startButton.enabled = false // Запретить нажатие кнопки "Start" при запуске приложения
+        }
 
 }
